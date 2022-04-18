@@ -1,0 +1,141 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+@media (min-width: 768px) {
+	///NAVIGATION
+	.nav {
+		.navbar {
+			&-desktop {
+				display: block;
+				font-size: 0;
+				letter-spacing: 2px;
+				overflow: hidden;
+				transition: transform 0.3s;
+			}
+
+			&__item {
+				font-size: 1.8rem;
+				text-decoration: none;
+				height: 80px;
+				color: $black;
+				padding: 1.8em;
+				cursor: pointer;
+				transition: background-color 0.3s, color 0.3s;
+
+				&:hover {
+					background-color: $black;
+					color: $white;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+
+			.humburger-btn {
+				display: none;
+			}
+		}
+	}
+
+	//HEADER
+	.header {
+		@include heroImage('../img/jungle-big.jpg');
+
+		&__title {
+			padding-left: 3em;
+		}
+
+		&__heading {
+			font-size: 3rem;
+			padding-bottom: 0.5em;
+		}
+		&__text {
+			font-size: 4.4rem;
+		}
+	}
+
+	//MAIN
+	.about-us {
+		&__content {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 0 1em;
+			margin-bottom: 2em;
+		}
+
+		&__img {
+			width: 50%;
+		}
+		&__text {
+			margin: 0 1em 0 2em;
+
+			h3 {
+				text-align: start;
+				margin: 0 0 1em;
+			}
+			p {
+				line-height: 1.5em;
+				letter-spacing: 0.1rem;
+			}
+		}
+
+		&__bg {
+			margin-top: 3em;
+			@include heroImage('../img/girl-big.jpg');
+			width: 100%;
+			height: 30vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			h3 {
+				color: $white;
+				text-align: center;
+				font-size: 2em;
+				font-weight: 400;
+				border: 1px solid #616161;
+				padding: 1em 5em;
+			}
+		}
+	}
+
+	//offers
+	.offers {
+		&__cards {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 0 2rem 4rem;
+			padding: 2em 0em;
+		}
+	}
+
+	//footer
+	.footer {
+		color: $black;
+		background-color: $light-grey;
+
+		.footer__boxes {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+
+			.footer__box {
+				padding: 4em;
+				text-align: left;
+				&-logo {
+					text-align: center;
+				}
+			}
+
+			.footer__box-desktop {
+				display: block;
+			}
+		}
+	}
+}

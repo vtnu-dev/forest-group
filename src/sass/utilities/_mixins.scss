@@ -1,0 +1,7 @@
+@use 'colors' as *;
+@mixin heroImage($bgImg) {
+	background-image: $dark-background, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	// background-attachment: fixed;
+}
