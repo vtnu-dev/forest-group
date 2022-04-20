@@ -22,19 +22,24 @@
 				cursor: pointer;
 				transition: background-color 0.3s, color 0.3s;
 
+				&::before {
+					display: none;
+				}
+
 				&:hover {
 					background-color: $black;
 					color: $white;
-				}
-
-				&::before {
-					display: none;
 				}
 			}
 
 			.humburger-btn {
 				display: none;
 			}
+		}
+
+		.active {
+			background-color: $black;
+			color: $white;
 		}
 	}
 

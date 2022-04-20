@@ -7,6 +7,9 @@ const navbarItems = document.querySelectorAll('.navbar__item');
 const mainPage = document.querySelector('.main-page');
 
 
+
+
+
 const navActive = () => {
     navbarMobile.classList.toggle('navbar-mobile--active');
     btnBars.classList.toggle('fa-xmark');
@@ -24,10 +27,8 @@ const navActive = () => {
 btnHumburger.addEventListener('click', navActive)
 
 
-
-
-
 function currentYear() {
     footerYear.textContent = (new Date()).getFullYear();
 }
 currentYear()
+
