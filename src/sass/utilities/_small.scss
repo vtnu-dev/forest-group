@@ -6,19 +6,19 @@
 	.nav {
 		.navbar {
 			&-desktop {
-				display: block;
+				// display: block;
+				display: flex;
 				font-size: 0;
 				letter-spacing: 2px;
 				overflow: hidden;
 				transition: transform 0.3s;
 			}
-
+			
 			&__item {
-				font-size: 1.8rem;
+				font-size: 2rem;
+				padding: 0 1.6em;
 				text-decoration: none;
-				height: 80px;
 				color: $black;
-				padding: 1.8em;
 				cursor: pointer;
 				transition: background-color 0.3s, color 0.3s;
 
@@ -27,20 +27,23 @@
 				}
 
 				&:hover {
-					background-color: $black;
-					color: $white;
+					background-color: $grey-item;
+					// color: $white;
 				}
+
 			}
 
 			.humburger-btn {
 				display: none;
 			}
+
+			.active {
+				background-color: $black;
+				color: $white;
+			}
 		}
 
-		.active {
-			background-color: $black;
-			color: $white;
-		}
+		
 	}
 
 	//HEADER
@@ -109,15 +112,16 @@
 	//offers
 	.offers {
 		&__cards {
+			display: flex;
 			flex-direction: row;
-			justify-content: center;
+			justify-content: space-evenly;
 			flex-wrap: wrap;
 		}
 
-		&__card {
-			margin: 0 2rem 4rem;
-			padding: 2em 0em;
-		}
+		// &__card {
+		// 	margin: 0 2rem 4rem;
+		// 	padding: 2em 0em;
+		// }
 	}
 
 	//footer
