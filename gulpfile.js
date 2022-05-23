@@ -11,7 +11,7 @@ const clean = require('gulp-clean')
 const browserSync = require('browser-sync').create()
 // const { reload } = require('browser-sync')
 const reload = browserSync.reload
-const kit = require('gulp-kit');
+const kit = require('gulp-kit')
 
 const paths = {
 	html: './html/**/*.kit',
@@ -50,22 +50,17 @@ function javaScript(done) {
 }
 
 function convertImages(done) {
-	src(paths.img)
-    .pipe(imagemin())
-    .pipe(dest(paths.imgDest));
+	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest))
 	done()
 }
 
 function moveIcons(done) {
-	src(paths.icons)
-    .pipe(dest(paths.iconsDest));
+	src(paths.icons).pipe(dest(paths.iconsDest))
 	done()
 }
 
 function handleKits(done) {
-	src(paths.html)
-    .pipe(kit())
-    .pipe(dest('./'));
+	src(paths.html).pipe(kit()).pipe(dest('./'))
 	done()
 }
 
@@ -79,6 +74,7 @@ function startBrowserSync(done) {
 		server: {
 			baseDir: './',
 		},
+		notify: false,
 	})
 	done()
 }
